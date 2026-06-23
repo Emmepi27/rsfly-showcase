@@ -18,7 +18,7 @@ flowchart LR
   C --> E[GeoDjango / DRF API<br/>GeoJSON + JSON]
   E --> F[Nuxt / Vue frontend]
   F --> G[2D replay<br/>MapLibre GL]
-  F --> H[3D replay<br/>deck.gl + Three.js]
+  F --> H[3D replay<br/>deck.gl data + Three.js glider]
 ```
 
 ---
@@ -92,7 +92,7 @@ The **Nuxt / Vue** app consumes the GeoJSON/JSON API and offers two replay modes
 
 - a **2D** map replay on **MapLibre GL**;
 - a **3D** replay that composes **deck.gl** data layers (track, thermals) over the MapLibre base map,
-  with **Three.js** for 3D model and scene rendering.
+  with **Three.js** rendering the 3D glider model.
 
 The glider animates along the track using the stored per-fix timestamps, and the timeline is
 scrubbable.
