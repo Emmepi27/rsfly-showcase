@@ -1,0 +1,80 @@
+# ============================================================
+#  RSFly showcase — .gitignore
+#  Defense-in-depth: this is a public repo. Never commit
+#  secrets, real flight data, databases, media or build output.
+# ============================================================
+
+# ---- Secrets & environment ----
+.env
+.env.*
+*.env
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.keystore
+secrets*
+credentials*
+*.secret
+
+# ---- Flight data (NEVER commit real tracks) ----
+*.igc
+igc/
+igc_dump/
+voli_igc/
+*.gpx
+*.kml
+
+# ---- Databases & dumps ----
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.sql
+*.bak
+
+# ---- Media & uploads ----
+media/
+uploads/
+static_collected/
+# Note: assets/ IS tracked (screenshot placeholders).
+#       Any image you add there must use DEMO/sample data only.
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# ---- Node / Nuxt / Vue ----
+node_modules/
+.nuxt/
+.output/
+.nitro/
+dist/
+.cache/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# ---- Build & coverage ----
+build/
+coverage/
+htmlcov/
+.coverage
+
+# ---- IDE / OS ----
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.swp
